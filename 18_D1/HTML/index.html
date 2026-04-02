@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-D1</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="w-100 h-80" src="../IMG/HINH1.jpg" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav bg-light">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal">
+                            Đặt vé
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ tên khách hàng</th>
+                            <th>Hình CMND</th>
+                            <th>Ngày đi</th>
+                            <th>Số điện thoại</th>
+                            <th>Phụ thu hành lý</th>
+                            <th>Hình thức thanh toán</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row ps-4 pe-4 text-center fs-4">
+            <div class="col-md-12 border">
+                MSSV - Họ tên - Lớp
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>ĐẶT VÉ TRỰC TUYẾN</h3>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-2 mt-2">
+                            <label for="ten" class="label-control mb-2">Họ tên khách hàng</label>
+                            <input type="text" name="ten" id="ten" class="form-control shadow-none" onblur="kiemTraHoTen()">
+                            <span id="orr1"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label for="hinh" class="label-control mb-2">Hình CMND</label>
+                            <input type="file" name="hinh" id="hinh" class="form-control shadow-none" accept="image/png, image/jpeg, image/jpg">
+                        </div>
+                        <div class="mb-2">
+                            <label for="nd" class="label-control mb-2">Ngày đi</label>
+                            <input type="date" name="nd" id="nd" class="form-control shadow-none">
+                        </div>
+                        <div class="mb-2">
+                            <label for="sdt" class="label-control mb-2">Số điện thoại</label>
+                            <input type="tel" name="sdt" id="sdt" class="form-control shadow-none" onblur="kiemTraSoDienThoai()">
+                            <span id="orr2"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label for="hlkg" class="label-control mb-2">Hành lý ký gửi</label>
+                            <select name="hlkg" id="hlkg" class="form-select shadow-none mb-2" onchange="tinhTien(this.value)">
+                                <option value="210000">15kg</option>
+                                <option value="250000">25kg</option>
+                                <option value="300000">35kg</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="pthl" class="label-control mb-2">Phụ thu hành lý</label>
+                            <input type="text" name="pthl" id="pthl" class="form-control shadow-none mb-2" value="0" readonly>
+                        </div>
+                        <div class="mb-2">
+                            <label for="tt" class="label-control">Hình thức thanh toán</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="payCK" value="Chuyển khoản" checked>
+                                <label class="form-check-label" for="payCK">Chuyển khoản</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="payTM" value="Tiền mặt">
+                                <label class="form-check-label" for="payTM">Tiền mặt</label>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-primary">Đặt vé</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
