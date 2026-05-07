@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 4</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/D4.js"></script>
+</head>
+<body>
+    <div class="container border my-3 border-2 border-primary">
+        <!-- Header -->
+        <div class="row">
+            <div class="col-md-12">
+                <img class="w-100 h-100" src="../IMG/HINH4.jpg" alt="">
+            </div>
+        </div>
+        <!-- Nav -->
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link fw-bold nav-color">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link fw-bold nav-color" data-bs-toggle="modal" data-bs-target="#myModal">ĐẶT MUA HOA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link fw-bold nav-color">CÂY XANH VĂN PHÒNG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link fw-bold nav-color">TIN TỨC</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row">
+            <!-- Left -->
+            <div class="col-md-2">
+                <img class="w-100 h-100" src="../IMG/HINH5.jpg" alt="">
+            </div>
+            <!-- Main -->
+            <div class="col-md-10">
+                <h2 class="text-center">DANH SÁCH THÔNG TIN ĐẶT HÀNH NHANH</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>HỌ TÊN</th>
+                            <th>SỐ ĐIỆN THOẠI</th>
+                            <th>NGÀY ĐẶT</th>
+                            <th>EMAIL</th>
+                            <th>LOẠI HOA</th>
+                            <th>THANH TOÁN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="row text-center">
+            <div class="col-md-12">
+                <span class="fs-5">24698201 - Bùi Nguyễn Thanh Phi - DHKHMT20B_TCTA</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title w-100 text-center fs-3" id="staticBackdropLabel">THÔNG TIN ĐẶT HÀNH NHANH</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-4">
+                <div class="col-sm-3 text-end mt-2">
+                    <label for="hoTen">Họ Và Tên</label>
+                    <span class="text-danger">*</span>
+                </div>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="hoTen" placeholder="Nguyen Van A" onblur="kiemTraHoTen()">
+                    <span id="orr1"></span>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-3 text-end mt-2">
+                    <label for="soDienThoai">Số Điện Thoại</label>
+                    <span class="text-danger">*</span>
+                </div>
+                <div class="col-sm-9">
+                    <input type="tel" class="form-control" id="soDienThoai" placeholder="0XXX.XXX.XXX" onblur="kiemTraSĐT()">
+                    <span id="orr2"></span>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-3 text-end mt-2">
+                    <label for="ngayDat">Ngày Đặt</label>
+                </div>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" id="ngayDat">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-3 text-end mt-2">
+                    <label for="email">Email</label>
+                    <span class="text-danger">*</span>
+                </div>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control" id="email" placeholder="name_email@iuh.edu.vn" onblur="kiemTraEmail()">
+                    <span id="orr3"></span>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-3 text-end mt-2">
+                    <label for="loaiHoa">Loại Hoa</label>
+                </div>
+                <div class="col-sm-9">
+                    <select class="form-select" id="loaiHoa">
+                        <option value="">Chọn loại hoa</option>
+                        <option value="hoa hồng">Hoa Hồng</option>
+                        <option value="hoa cúc">Hoa Cúc</option>
+                        <option value="hoa lan">Hoa Lan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="loaiThanhToan">Loại Thanh Toán</label>
+                    <div class="form-check form-check-inline mx-3">
+                        <input class="form-check-input" type="radio" name="tienMat" id="tienMat">
+                        <label class="form-check-label" for="tienMat">Tiền mặt</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="chuyenKhoan" id="chuyenKhoan">
+                        <label class="form-check-label" for="chuyenKhoan">Chuyển khoản</label>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Đặt Hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,3 +1,10 @@
 table th {
     text-align: center;
 }
+
+.nav-color {
+    color: rgb(49, 137, 232) !important;
+}
+html {
+    font-family: 'Times New Roman', Times, serif !important;
+}
