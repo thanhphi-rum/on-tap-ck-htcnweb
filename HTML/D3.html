@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 3</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/D3.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="w-100 h-100" src="../IMG/HINH3.jpg" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Đặt lịch</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">STT</th>
+                      <th scope="col">Mã bệnh nhân</th>
+                      <th scope="col">Thẻ bảo hiểm</th>
+                      <th scope="col">Ngày đăng ký khám</th>
+                      <th scope="col">Loại dịch vụ</th>
+                      <th scope="col">Tổng thành tiền dịch vụ</th>
+                      <th scope="col">Chuyên khoa</th>
+                    </tr>
+                  </thead>
+                  <tbody id="thongTin" class="text-center align-middle">
+                    <!--  -->
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-md-12 border text-center">
+                <span class="fs-4">24698201 - Bùi Nguyễn Thanh Phi - DHKHMT20B_TCTA</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">ĐẶT LỊCH KHÁM TRỰC TUYẾN</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Mã bệnh nhân -->
+            <div class="mb-3">
+                <label class="mb-1" for="maBenhNhan">Mã bệnh nhân</label>
+                <input type="text" name="maBenhNhan" id="maBenhNhan" class="form-control" onblur="kiemTraMaBN()">
+                <span id="orr1"></span>
+            </div>
+            <!-- Thẻ bảo hiểm -->
+            <div class="mb-3">
+                <label class="mb-1" for="theBaoHiem">Thẻ bảo hiểm</label>
+                <input type="file" name="theBaoHiem" id="theBaoHiem" class="form-control" onblur="kiemTraAnh()">
+                <span id="orr2"></span>
+            </div>
+            <!-- Ngày khám -->
+            <div class="mb-3">
+                <label class="mb-1" for="ngayDangKyKham">Ngày đăng ký khám</label>
+                <input type="date" name="ngayDangKyKham" id="ngayDangKyKham" class="form-control" onblur="kiemTraNgayDK()">
+                <span id="orr3"></span>
+            </div>
+            <!-- Loại dịch vụ -->
+            <div class="mb-3">
+                <label class="mb-1" for="loaiDichVu">Loại dịch vụ</label> <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="loaiDichVu" id="loaiDichVu1" value="400000" onchange="tinhTongThanhTien()">
+                    <label class="form-check-label" for="loaiDichVu1">Khám theo yêu cầu</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="loaiDichVu" id="loaiDichVu2" value="600000" onchange="tinhTongThanhTien()">
+                    <label class="form-check-label" for="loaiDichVu2">Điều trị ngoại trú</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="loaiDichVu" id="loaiDichVu3" value="500000" onchange="tinhTongThanhTien()">
+                    <label class="form-check-label" for="loaiDichVu3">Bác sĩ theo yêu cầu</label>
+                </div>
+            </div>
+            <!-- Tổng thành tiền dịch vụ -->
+            <div class="mb-3">
+                <label class="mb-1" for="tongThanhTienDichVu">Tổng thành tiền dịch vụ</label>
+                <input type="text" name="tongThanhTienDichVu" id="tongThanhTienDichVu" class="form-control" readonly>
+            </div>
+            <!-- Chuyên khoa -->
+            <div class="mb-3">
+                <label class="mb-1" for="chuyenKhoa">Chuyên khoa</label> <br>
+                <select name="chuyenKhoa" id="chuyenKhoa" class="form-select">
+                    <option value="Nhi">Nhi</option>
+                </select>
+            </div>
+            <!-- Button -->
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary" onclick="luuThongTin()">Đặt lịch</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

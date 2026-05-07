@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 2</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/D2.js"></script>
+</head>
+<body>
+    <div class="container px-0 py-3">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="w-100 h-100" src="../IMG/HINH2.jpg" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">
+                            Nhập sách
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">STT</th>
+                  <th scope="col">Mã sách</th>
+                  <th scope="col">Hình minh họa</th>
+                  <th scope="col">Ngày nhập</th>
+                  <th scope="col">Số lượng</th>
+                  <th scope="col">Nhà xuất bản</th>
+                  <th scope="col">Chiết khấu</th>
+                  <th scope="col">Thể loại</th>
+                </tr>
+              </thead>
+              <tbody id="luuThongTin" class="text-center align-middle">
+                <!--  -->
+              </tbody>
+            </table>
+        </div>
+        <div class="row g-0">
+            <div class="col-md-12 text-center border">
+                <span class="fs-4">24698201 - Bùi Nguyễn Thanh Phi - DHKHMT20B_TCTA</span>
+            </div>
+        </div>
+    </div>
+
+     
+     <!-- Modal -->
+     <div class="modal fade" id="myModal">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="staticBackdropLabel">PHIẾU NHẬP KHO TRỰC TUYẾN</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+                <!-- Mã sách -->
+                <div class="mb-3">
+                    <label class="mb-1" for="maSach">Mã Sách</label>
+                    <input type="text" name="maSach" id="maSach" class="form-control" onblur="kiemTraMaSach()">
+                    <span id="orr1"></span>
+                </div>
+                <!-- Hình minh họa -->
+                <div class="mb-3">
+                    <label class="mb-1" for="hinhMinhHoa">Hình Minh Họa</label>
+                    <input type="file" name="hinhMinhHoa" id="hinhMinhHoa" class="form-control" onblur="kiemTraAnh()">
+                    <span id="orr2"></span>
+                </div>
+                <!-- Ngày nhập -->
+                <div class="mb-3">
+                    <label class="mb-1" for="ngayNhap">Ngày Nhập</label>
+                    <input type="date" name="ngayNhap" id="ngayNhap" class="form-control" onblur="kiemTraNgayNhap()">
+                    <span id="orr3"></span>
+                </div>
+                <!-- Số lượng -->
+                <div class="mb-3">
+                    <label class="mb-1" for="soLuong">Số lượng</label>
+                    <input type="text" name="soLuong" id="soLuong" class="form-control" onblur="kiemTraSoLuong()">
+                    <span id="orr4"></span>
+                </div>
+                <!-- Nhà xuất bản -->
+                <div class="mb-3">
+                    <label class="mb-1" for="nhaXuatBan">Nhà xuất bản</label>
+                    <select name="nhaXuatBan" id="nhaXuatBan" class="form-select" onchange="tinhChietKhau(this.value)">
+                        <option value="">-- Chọn nhà xuất bản --</option>
+                        <option value="25">NXB Trẻ</option>
+                        <option value="20">NXB Kim Đồng</option>
+                        <option value="30">NXB Thế Giới Mới</option>
+                        <option value="35">NXB Tri Thức</option>
+                    </select>
+                </div>
+                <!-- Chiết khấu -->
+                <div class="mb-3">
+                    <label class="mb-1" for="chietKhau">Chiết Khấu</label>
+                    <input type="text" name="chietKhau" id="chietKhau" class="form-control" readonly>
+                </div>
+                <!-- Thể loại -->
+                <div class="mb-3">
+                    <label class="mb-1" for="theLoai">Thể Loại</label> <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="vanHoc" id="vanHoc" value="Văn học">
+                        <label class="form-check-label" for="vanHoc">Văn học</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="khoaHoc" id="khoaHoc" value="Khoa học">
+                        <label class="form-check-label" for="khoaHoc">Khoa học</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="thieuNhi" id="thieuNhi" value="Thiếu nhi">
+                        <label class="form-check-label" for="thieuNhi">Thiếu nhi</label>
+                    </div>
+                    
+                </div>
+                <!-- Button Nhập kho -->
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary" onclick="luuThongTin()">Nhập Kho</button>
+                </div>
+           </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+           </div>
+         </div>
+       </div>
+     </div>
+</body>
+</html>

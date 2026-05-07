@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>18-D1</title>
+    <title>Đề 1</title>
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/bootstrap.css">
     <script src="../JS/bootstrap.bundle.min.js"></script>
-    <script src="../JS/main.js"></script>
+    <script src="../JS/D1.js"></script>
 </head>
 <body>
     <div class="container">
@@ -44,23 +44,15 @@
                             <th>Hình thức thanh toán</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="thongTin" class="text-center align-middle">
+                        <!-- Chỗ lưu thông tin -->
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row ps-4 pe-4 text-center fs-4">
             <div class="col-md-12 border">
-                MSSV - Họ tên - Lớp
+                24698201 - Bùi Nguyễn Thanh Phi - DHKHMT20B_TCTA
             </div>
         </div>
     </div>
@@ -80,11 +72,13 @@
                         </div>
                         <div class="mb-2">
                             <label for="hinh" class="label-control mb-2">Hình CMND</label>
-                            <input type="file" name="hinh" id="hinh" class="form-control shadow-none" accept="image/png, image/jpeg, image/jpg">
+                            <input type="file" name="hinh" id="hinh" class="form-control shadow-none" onblur="kiemTraAnh()">
+                            <span id="orr4"></span>
                         </div>
                         <div class="mb-2">
                             <label for="nd" class="label-control mb-2">Ngày đi</label>
-                            <input type="date" name="nd" id="nd" class="form-control shadow-none">
+                            <input type="date" name="nd" id="nd" class="form-control shadow-none" onblur="kiemTraNgayDi()">
+                            <span id="orr3"></span>
                         </div>
                         <div class="mb-2">
                             <label for="sdt" class="label-control mb-2">Số điện thoại</label>
@@ -115,7 +109,7 @@
                             </div>
                         </div>
                         <div class="mb-2">
-                            <button type="submit" class="btn btn-primary">Đặt vé</button>
+                            <button type="button" class="btn btn-primary" onclick="luuThongTin()">Đặt vé</button>
                         </div>
                     </form>
                 </div>
