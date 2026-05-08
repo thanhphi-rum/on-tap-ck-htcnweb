@@ -61,3 +61,46 @@ function kiemTraEmail() {
         return false;
     }
 }
+// Kiểm tra ngày đặt
+function kiemTraNgayDat() {
+    var ngayDat = new Date(document.getElementById('ngayDat').value);
+    var ngayHienTai = new Date();
+    ngayHienTai.setHours(0, 0, 0, 0);
+    ngayHienTai.setDate(ngayHienTai.getDate() + 1);
+    var errorElement = document.getElementById('orr4');
+
+    if(ngayDat >= ngayHienTai) {
+        errorElement.innerHTML = 'Ngày đặt hợp lệ';
+        errorElement.style.color = 'green';
+        return true;
+    } else {
+        errorElement.innerHTML = 'Ngày đặt không hợp lệ. Ngày Đặt sau ngày hiện tại';
+        errorElement.style.color = 'red';
+        return false;
+    }
+}
+// Lưu thông tin\
+function luuThongTin() {
+    var hoTen = document.getElementById('hoTen').value;
+    var soDienThoai = document.getElementById('soDienThoai').value;
+    var email = document.getElementById('email').value;
+    var ngayDat = document.getElementById('ngayDat').value;
+    var ngayDatVN = new Date(ngayDat).toLocaleDateString('vi-VN');
+    var loaiHoa = document.getElementById('loaiHoa').value;
+    var thanhToan = document.querySelector('input[name="loaiThanhToan"]:checked').value;
+
+    var luu = document.getElementById('thongTin');
+    var stt = luu.rows.length + 1;
+    var row = luu.insertRow();
+    row.innerHTML = `
+        <td>${stt}</td>
+        <td>${hoTen}</td>
+        <td>${soDienThoai}</td>
+        <td>${ngayDatVN}</td>
+        <td>${email}</td>
+        <td>${loaiHoa}</td>
+        <td>${thanhToan}</td>
+    `;
+
+    bootstrap.Modal.getInstance(document.getElementById('myModal')).hide();
+}

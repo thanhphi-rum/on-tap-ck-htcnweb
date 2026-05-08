@@ -57,16 +57,8 @@
                             <th>THANH TOÁN</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="thongTin" class="text-center align-middle">
+                        <!--  -->
                     </tbody>
                 </table>
             </div>
@@ -111,9 +103,11 @@
             <div class="row mb-4">
                 <div class="col-sm-3 text-end mt-2">
                     <label for="ngayDat">Ngày Đặt</label>
+                    <span class="text-danger">*</span>
                 </div>
                 <div class="col-sm-9">
-                    <input type="date" class="form-control" id="ngayDat">
+                    <input type="date" class="form-control" id="ngayDat" onblur="kiemTraNgayDat()">
+                    <span id="orr4"></span>
                 </div>
             </div>
             <div class="row mb-4">
@@ -133,9 +127,9 @@
                 <div class="col-sm-9">
                     <select class="form-select" id="loaiHoa">
                         <option value="">Chọn loại hoa</option>
-                        <option value="hoa hồng">Hoa Hồng</option>
-                        <option value="hoa cúc">Hoa Cúc</option>
-                        <option value="hoa lan">Hoa Lan</option>
+                        <option value="Hoa hồng">Hoa Hồng</option>
+                        <option value="Hoa cúc">Hoa Cúc</option>
+                        <option value="Hoa lan">Hoa Lan</option>
                     </select>
                 </div>
             </div>
@@ -143,18 +137,18 @@
                 <div class="col-sm-12">
                     <label for="loaiThanhToan">Loại Thanh Toán</label>
                     <div class="form-check form-check-inline mx-3">
-                        <input class="form-check-input" type="radio" name="tienMat" id="tienMat">
+                        <input class="form-check-input" type="radio" name="loaiThanhToan" id="tienMat" value="Tiền mặt">
                         <label class="form-check-label" for="tienMat">Tiền mặt</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="chuyenKhoan" id="chuyenKhoan">
+                        <input class="form-check-input" type="radio" name="loaiThanhToan" id="chuyenKhoan" value="Chuyển khoản">
                         <label class="form-check-label" for="chuyenKhoan">Chuyển khoản</label>
                     </div>
                 </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Đặt Hàng</button>
+            <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal" onclick="luuThongTin()">Đặt Hàng</button>
           </div>
         </div>
       </div>
