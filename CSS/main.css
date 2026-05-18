@@ -8,3 +8,7 @@ table th {
 html {
     font-family: 'Times New Roman', Times, serif !important;
 }
+.cus-banner {
+    object-fit: cover;
+    height: 300px;
+}
