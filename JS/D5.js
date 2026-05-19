@@ -127,14 +127,15 @@ function saveData() {
     var ns = document.getElementById("ns").value;
     var sdt = document.getElementById("sdt").value.trim();
     var em = document.getElementById("em").value.trim();
+    // Select
     var ckh = document.getElementById("ckh");
     var khoaHoc = ckh.options[ckh.selectedIndex].text;
     var tgh = document.getElementById("tgh").value;
 
-    // Lấy hình thức học
+    // Lấy hình thức học - Radio
     var hinhThuc = document.querySelector('input[name="hinhThucHoc"]:checked').value;
 
-    // Lấy kỹ năng được chọn
+    // Lấy kỹ năng được chọn - Checkbox
     var kyNang = [];
     document.querySelectorAll('input[name="kyNangLT"]:checked').forEach(function(cb) {
         kyNang.push(cb.value);
