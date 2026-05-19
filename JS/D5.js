@@ -132,12 +132,12 @@ function saveData() {
     var tgh = document.getElementById("tgh").value;
 
     // Lấy hình thức học
-    var hinhThuc = document.querySelector('input[name="hinhThucHoc"]:checked').nextElementSibling.innerHTML;
+    var hinhThuc = document.querySelector('input[name="hinhThucHoc"]:checked').value;
 
     // Lấy kỹ năng được chọn
     var kyNang = [];
     document.getElementsByName("kyNangLT").forEach(cb => {
-        if (cb.checked) kyNang.push(cb.nextElementSibling.innerHTML);
+        if (cb.checked) kyNang.push(cb.value);
     });
 
     var luu = document.getElementById('thongTin');
