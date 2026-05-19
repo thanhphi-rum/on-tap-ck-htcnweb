@@ -67,7 +67,7 @@
                 <th scope="col">Kỹ Năng Cần Luyện</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="thongTin" class="text-center align-middle">
               <!-- Lưu thông tin -->
             </tbody>
           </table>
@@ -106,36 +106,44 @@
             <div class="row mb-3">
               <div class="col-sm-3 text-end">
                 <label class="mt-1 fw-bold" for="hoTen">Họ tên</label>
+                <span class="text-danger">*</span>
               </div>
               <div class="col-sm-9">
-                <input type="text" name="ht" id="ht" class="form-control" />
+                <input type="text" name="ht" id="ht" class="form-control" onblur="kiemTraHoTen()"/>
+                <span id="orr1"></span>
               </div>
             </div>
             <!-- Ngày sinh -->
             <div class="row mb-3">
               <div class="col-sm-3 text-end">
                 <label class="mt-1 fw-bold" for="ngaySinh">Ngày sinh</label>
+                <span class="text-danger">*</span>
               </div>
               <div class="col-sm-9">
-                <input type="date" name="ns" id="ns" class="form-control" />
+                <input type="date" name="ns" id="ns" class="form-control" onblur="kiemTraNgaySinh()"/>
+                <span id="orr2"></span>
               </div>
             </div>
             <!-- Số điện thoại -->
             <div class="row mb-3">
               <div class="col-sm-3 text-end">
                 <label class="mt-1 fw-bold" for="soDienThoai">Số điện thoại</label>
+                <span class="text-danger">*</span>
               </div>
               <div class="col-sm-9">
-                <input type="tel" name="sdt" id="sdt" class="form-control" />
+                <input type="tel" name="sdt" id="sdt" class="form-control" onblur="kiemTraSDT()"/>
+                <span id="orr3"></span>
               </div>
             </div>
             <!-- Email -->
             <div class="row mb-3">
               <div class="col-sm-3 text-end">
                 <label class="mt-1 fw-bold" for="email">Email</label>
+                <span class="text-danger">*</span>
               </div>
               <div class="col-sm-9">
-                <input type="email" name="em" id="em" class="form-control" />
+                <input type="email" name="em" id="em" class="form-control" onblur="kiemTraEmail()"/>
+                <span id="orr4"></span>
               </div>
             </div>
             <!-- Chọn khóa học -->
@@ -144,7 +152,7 @@
                 <label class="mt-1 fw-bold" for="chonKhoaHoc">Chọn khóa học</label>
               </div>
               <div class="col-sm-9">
-                <select name="chonKhoaHoc" id="ckh" class="form-select">
+                <select name="chonKhoaHoc" id="ckh" class="form-select" onchange="thoiGianHoc(this.value)">
                   <option value="3">Anh văn cơ bản</option>
                   <option value="6">Anh văn giao tiếp</option>
                   <option value="12">Luyện thi IELTS</option>
@@ -170,6 +178,7 @@
             <div class="row mb-3">
               <div class="col-sm-3 text-end">
                 <label class="fw-bold">Chọn hình thức học</label>
+                <span class="text-danger">*</span>
               </div>
               <div class="col-sm-9">
                 <div class="form-check">
@@ -177,7 +186,7 @@
                     class="form-check-input"
                     type="radio"
                     name="hinhThucHoc"
-                    id="tt"
+                    id="tt" onchange="hinhThucHoc()"
                   />
                   <label class="form-check-label" for="tt"
                     >Học tại trung tâm</label
@@ -188,35 +197,38 @@
                     class="form-check-input"
                     type="radio"
                     name="hinhThucHoc"
-                    id="on"
+                    id="on" onchange="hinhThucHoc()"
                   />
                   <label class="form-check-label" for="on">Học online</label>
                 </div>
+                <span id="orr5"></span>
               </div>
             </div>
             <!-- Các kỹ năng luyện tập -->
             <div class="row mb-3">
               <div class="col-sm-3 text-end">
                 <label class="fw-bold" for="kyNangLT">Các kỹ năng luyện tập</label>
+                <span class="text-danger">*</span>
               </div>
               <div class="col-sm-9">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="nghe">
+                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="nghe" onchange="kiemTraKyNang()">
                   <label class="form-check-label" for="kyNangLT">Kỹ năng nghe</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="doc">
+                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="doc" onchange="kiemTraKyNang()">
                   <label class="form-check-label" for="kyNangLT">Kỹ năng đọc</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="viet">
+                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="viet" onchange="kiemTraKyNang()">
                   <label class="form-check-label" for="kyNangLT">Kỹ năng viết</label>
                 </div>
+                <span id="orr6"></span>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">Đăng ký</button>
+            <button type="button" class="btn btn-success" onclick="saveData()">Đăng ký</button>
             <button
               type="button"
               class="btn btn-danger"
