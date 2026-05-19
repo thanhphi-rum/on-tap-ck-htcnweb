@@ -136,8 +136,8 @@ function saveData() {
 
     // Lấy kỹ năng được chọn
     var kyNang = [];
-    document.getElementsByName("kyNangLT").forEach(cb => {
-        if (cb.checked) kyNang.push(cb.value);
+    document.querySelectorAll('input[name="kyNangLT"]:checked').forEach(function(cb) {
+        kyNang.push(cb.value);
     });
 
     var luu = document.getElementById('thongTin');
