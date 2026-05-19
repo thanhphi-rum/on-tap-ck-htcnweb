@@ -1,102 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đề 5</title>
-    <link rel="stylesheet" href="../CSS/main.css">
-    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
     <script src="../JS/bootstrap.bundle.min.js"></script>
     <script src="../JS/D5.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container mt-5 border border-primary border-3 g-0 p-1">
-        <!-- Banner -->
-        <div class="row">
-            <div class="col-md-12">
-                <img class="w-100 cus-banner" src="../IMG/HINH6.jpg" alt="">
-            </div>
+      <!-- Banner -->
+      <div class="row">
+        <div class="col-md-12">
+          <img class="w-100 cus-banner" src="../IMG/HINH6.jpg" alt="" />
         </div>
-        <!-- Nav -->
-        <div class="row py-3">
-            <div class="col-md-12">
-                <ul class="nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Free English Coourse</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">Trang chủ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">Giới thiệu</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">Khóa học</a>
-                  </li>
-                  <li>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">
-                        Đăng ký
-                    </button>
-                  </li>
-                </ul>
-            </div>
+      </div>
+      <!-- Nav -->
+      <div class="row py-3">
+        <div class="col-md-12">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Free English Coourse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Khóa học</a>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                Đăng ký
+              </button>
+            </li>
+          </ul>
         </div>
-        <!-- Table -->
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th scope="col" colspan="8" class="text-start fw-normal fs-2">DANH SÁCH ĐĂNG KÝ KHÓA HỌC</th>
-                    </tr>
-                    <tr>
-                      <th scope="col">STT</th>
-                      <th scope="col">Họ Tên</th>
-                      <th scope="col">Ngày Sinh</th>
-                      <th scope="col">Điện Thoại</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Khóa Học</th>
-                      <th scope="col">Hình Thức Học</th>
-                      <th scope="col">Kỹ Năng Cần Luyện</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Lưu thông tin -->
-                  </tbody>
-                </table>
-            </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col" colspan="8" class="text-start fw-normal fs-2">
+                  DANH SÁCH ĐĂNG KÝ KHÓA HỌC
+                </th>
+              </tr>
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Họ Tên</th>
+                <th scope="col">Ngày Sinh</th>
+                <th scope="col">Điện Thoại</th>
+                <th scope="col">Email</th>
+                <th scope="col">Khóa Học</th>
+                <th scope="col">Hình Thức Học</th>
+                <th scope="col">Kỹ Năng Cần Luyện</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Lưu thông tin -->
+            </tbody>
+          </table>
         </div>
-        <!-- Footer -->
-        <div class="row bg-primary g-0 text-white fw-bold">
-            <div class="col-md-12 d-flex flex-column align-items-center">
-                <p class="text-center">Thông tin sinh viên:</p>
-                <div class="fst-italic">
-                    <p>Họ tên: Bùi Nguyễn Thanh Phi</p>
-                    <p>Mã sinh viên: 24698201</p>
-                    <p>Mã lớp: DHKHMT20B_TCTA</p>
-                </div>
-                
-            </div>
+      </div>
+      <!-- Footer -->
+      <div class="row bg-primary g-0 text-white fw-bold">
+        <div class="col-md-12 d-flex flex-column align-items-center">
+          <p class="text-center">Thông tin sinh viên:</p>
+          <div class="fst-italic">
+            <p>Họ tên: Bùi Nguyễn Thanh Phi</p>
+            <p>Mã sinh viên: 24698201</p>
+            <p>Mã lớp: DHKHMT20B_TCTA</p>
+          </div>
         </div>
+      </div>
     </div>
 
-     <!-- Modal -->
-     <div class="modal fade" id="myModal">
-       <div class="modal-dialog">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           </div>
-           <div class="modal-body">
-             ...
-           </div>
-           <div class="modal-footer">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title py-3 fs-2 fw-normal" id="staticBackdropLabel">
+              THÔNG TIN ĐĂNG KÝ
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Họ tên -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="mt-1 fw-bold" for="hoTen">Họ tên</label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" name="ht" id="ht" class="form-control" />
+              </div>
+            </div>
+            <!-- Ngày sinh -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="mt-1 fw-bold" for="ngaySinh">Ngày sinh</label>
+              </div>
+              <div class="col-sm-9">
+                <input type="date" name="ns" id="ns" class="form-control" />
+              </div>
+            </div>
+            <!-- Số điện thoại -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="mt-1 fw-bold" for="soDienThoai">Số điện thoại</label>
+              </div>
+              <div class="col-sm-9">
+                <input type="tel" name="sdt" id="sdt" class="form-control" />
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="mt-1 fw-bold" for="email">Email</label>
+              </div>
+              <div class="col-sm-9">
+                <input type="email" name="em" id="em" class="form-control" />
+              </div>
+            </div>
+            <!-- Chọn khóa học -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="mt-1 fw-bold" for="chonKhoaHoc">Chọn khóa học</label>
+              </div>
+              <div class="col-sm-9">
+                <select name="chonKhoaHoc" id="ckh" class="form-select">
+                  <option value="3">Anh văn cơ bản</option>
+                  <option value="6">Anh văn giao tiếp</option>
+                  <option value="12">Luyện thi IELTS</option>
+                </select>
+              </div>
+            </div>
+            <!-- Thời gian học -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="mt-1 fw-bold" for="thoiGianHoc">Thời gian học</label>
+              </div>
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  name="tgh"
+                  id="tgh"
+                  class="form-control"
+                  readonly
+                />
+              </div>
+            </div>
+            <!-- Chọn hình thức học -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="fw-bold">Chọn hình thức học</label>
+              </div>
+              <div class="col-sm-9">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="hinhThucHoc"
+                    id="tt"
+                  />
+                  <label class="form-check-label" for="tt"
+                    >Học tại trung tâm</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="hinhThucHoc"
+                    id="on"
+                  />
+                  <label class="form-check-label" for="on">Học online</label>
+                </div>
+              </div>
+            </div>
+            <!-- Các kỹ năng luyện tập -->
+            <div class="row mb-3">
+              <div class="col-sm-3 text-end">
+                <label class="fw-bold" for="kyNangLT">Các kỹ năng luyện tập</label>
+              </div>
+              <div class="col-sm-9">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="nghe">
+                  <label class="form-check-label" for="kyNangLT">Kỹ năng nghe</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="doc">
+                  <label class="form-check-label" for="kyNangLT">Kỹ năng đọc</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="kyNangLT" id="viet">
+                  <label class="form-check-label" for="kyNangLT">Kỹ năng viết</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
             <button type="button" class="btn btn-success">Đăng ký</button>
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy</button>
-           </div>
-         </div>
-       </div>
-     </div>
-</body>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Hủy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

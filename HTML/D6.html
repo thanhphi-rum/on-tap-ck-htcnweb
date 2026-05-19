@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đề 6</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/D6.js"></script>
+  </head>
+  <body>
+    <div class="container g-0 mt-5 mb-5 border border-2 border-success px-3">
+      <div class="row">
+        <img class="w-100 cus-banner2" src="../IMG/HINH7.jpg" alt="" />
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="">Hoạt động</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Danh sách lớp</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Ưu đãi</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-success me-auto"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                Đăng ký
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <h3 class="text-center mt-3 mb-3">DANH SÁCH ĐĂNG KÝ KHOÁ HỌC</h3>
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Họ và Tên</th>
+                <th scope="col">Số Điện Thoại</th>
+                <th scope="col">Email</th>
+                <th scope="col">Địa Chỉ</th>
+                <th scope="col">Năm Sinh Học Viên</th>
+                <th scope="col">Giáo Viên</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Nguyen Van An</td>
+                <td>0902.123.456</td>
+                <td>NguyenAn02@gmail.com</td>
+                <td>16 Nguyen Van Bao, F4 Go Vap</td>
+                <td>2009</td>
+                <td>TPHCM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row bg-success text-white g-0">
+        <div class="col-md-12">
+          <p class="text-center mt-3 fs-5">
+            24698201 - Bùi Nguyễn Thanh Phi - DHKHMT20B_TCTA
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title text-primary fw-bold"
+              id="staticBackdropLabel"
+            >
+              THÔNG TIN HỌC VIÊN
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="hoTen" class="form-label">Họ Tên</label>
+                <input type="text" class="form-control" id="hoTen" />
+                <small class="text-danger">(*)</small>
+              </div>
+              <div class="mb-3">
+                <label for="soDienThoai" class="form-label"
+                  >Số điện thoại</label
+                >
+                <input type="tel" class="form-control" id="soDienThoai" />
+                <small class="text-danger">(*)</small>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" />
+                <small class="text-danger">(*)</small>
+              </div>
+              <div class="mb-3">
+                <label for="diaChi" class="form-label">Địa chỉ</label>
+                <input type="text" class="form-control" id="diaChi" />
+                <small class="text-danger">(*)</small>
+              </div>
+              <div class="mb-3">
+                <label for="ngaySinh" class="form-label">Ngày sinh</label>
+                <input type="date" class="form-control" id="ngaySinh" />
+                <small class="text-danger">(*)</small>
+              </div>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Bạn muốn học giáo viên Hà Nội hay TPHCM</label
+                >
+                <div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="location"
+                      id="hanoi"
+                      value="HN"
+                      checked
+                    />
+                    <label class="form-check-label" for="hanoi">Hà Nội</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="location"
+                      id="tphcm"
+                      value="TPHCM"
+                    />
+                    <label class="form-check-label" for="tphcm">TPHCM</label>
+                  </div>
+                </div>
+                <small class="text-danger">(*)</small>
+              </div>
+              <button type="submit" class="btn btn-primary">Đăng Ký</button>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <p class="text-center text-primary fw-bold mb-0">
+              24698201 - Bùi Nguyễn Thanh Phi - DHKHMT20B_TCTA
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
